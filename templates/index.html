@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <title>GIGA</title>
 </head>
+
 <body>
-    <h1>Bem-vindo ao App "Nome Legal aqui"</h1>
-    <p>Index bem bonitão</p>
-    <a href="{{ url_for('reconhecimentoController.reconhecimento') }}">
-        <button>Fazer login por reconhecimento Facial</button>
-    </a>
+    <header>
+        <nav class="nav-bar">
+            <span id="burguer" class="material-symbols-outlined">menu</span>
+            <div class="logo">
+                <h2>GIGA</h2>
+            </div>
+            <div class="separador"></div>
+            <div class="significado-logo">Gestão Integrada de Gerenciamento Acadêmico</div>
+            <div class="nav-lista" style="display:none">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}" class="nav-link">Cadastro</a>
+                    </li>
+                    <li class="nav-item painel-button">
+                        <a href="{{ url_for('reconhecimentoController.reconhecimento') }} " class="nav-link">Acessar portal</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <h3>Opções do ADM</h3>
-    <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}">Inserir novas Imagens para Treino</a>
 
+
+    <script src="/static/js/nav.js"></script>
 </body>
+
 </html>
