@@ -1,7 +1,6 @@
 import cv2
 import os
 import time
-from datetime import datetime
 
 
 # Função para salvar imagem de treino
@@ -13,7 +12,7 @@ def salvar_imagem_de_treino(id, amostra='aluno'):
     # Inicializar a captura de vídeo
     cap = cv2.VideoCapture(0)
 
-    # Adicione um delay para garantir que a câmera esteja pronta
+    # Adicione um delay para abrir a camera
     time.sleep(2)
 
     # Diretório para salvar as imagens capturadas
@@ -40,8 +39,8 @@ def salvar_imagem_de_treino(id, amostra='aluno'):
         # Captura do pressionamento da tecla
         key = cv2.waitKey(1)
 
-        if key == 27:  # Pressionar ESC para capturar a foto
-            if len(facesDetectadas) == 1:  # Certifique-se de que uma face foi detectada
+        if key == 27:
+            if len(facesDetectadas) == 1:
                 x, y, w, h = facesDetectadas[0]
                 imagemFace = cv2.resize(frameCinza[y:y + h, x:x + w], (l, a))
 
