@@ -1,0 +1,32 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+.venv/
+venv/
+env/
+
+# Flask instance files
+instance/
+.env
+.flaskenv
+
+# Logs
+*.log
+
+# Test outputs
+.tox/
+.coverage
+.hypothesis/
+.nox/
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Windows specific
+Thumbs.db

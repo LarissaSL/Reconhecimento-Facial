@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Salvar novas Imagens</title>
+</head>
+<body>
+
+    <h1>Envio de Imagem</h1>
+
+    {% if carregando == 'false' %}
+        <p>Nova Imagem salva com o ID: {{ id }}</p>
+        <p>A imagem foi guardada com sucesso.</p>
+        <p>Caminho da imagem: {{ caminho_imagem }}</p>
+        <br><br>
+        <a href="{{ url_for('imgTreinoController.guardar_nova_imagem') }}">
+            <button>Inserir novas Imagens para Treino</button>
+        </a>
+        <a href="/">Voltar para o Índice</a>
+
+    {% else %}
+        <p>Criar algo de Loading aqui</p>
+        <a href="{{ url_for('imgTreinoController.guardar_nova_imagem') }}">
+            <button>Inserir novas Imagens para Treino</button>
+        </a>
+        <a href="/">Voltar para o Índice</a>
+    {% endif %}
+</body>
+</html>

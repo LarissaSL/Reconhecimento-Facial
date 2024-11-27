@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <h1>Bem-vindo ao App "Nome Legal aqui"</h1>
+    <p>Index bem bonitão</p>
+    <a href="{{ url_for('reconhecimentoController.reconhecimento') }}">
+        <button>Fazer login por reconhecimento Facial</button>
+    </a>
+
+    <h3>Opções do ADM</h3>
+    <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}">Inserir novas Imagens para Treino</a>
+
+</body>
+</html>
