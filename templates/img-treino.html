@@ -86,6 +86,18 @@
                 </div>
             </div>
 
+            {% if carregando == 'false' %}
+            {% if caminho_imagem %}
+            <script>
+                alert('Nova Imagem salva com o ID: {{ id }}\nA imagem foi guardada com sucesso.\nCaminho da imagem: {{ caminho_imagem }}');
+            </script>
+            {% else %}
+            <script>
+                alert('A captura foi cancelada ou houve um erro ao salvar a imagem.');
+            </script>
+            {% endif %}
+            {% endif %}
+
             <!-- Exibe o botão para inserir novas imagens -->
             <a href="{{ url_for('imgTreinoController.guardar_nova_imagem') }}">
                 <button class="btn">Inserir novas Imagens</button>
