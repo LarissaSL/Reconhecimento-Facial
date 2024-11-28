@@ -1,12 +1,27 @@
 
 footer {
+    max-height: 100px;
     text-align: center; 
-    padding: 20px 0; 
+    padding: 0.5rem; 
     background-color: var(--cor-branco); 
     color: var(--cor-roxo);
 }
 
-.giga-text {
-    font-size: 2em; 
-    font-weight: bold; 
+.info-footer {
+    margin: 1rem 0;
 }
+
+.info-footer p {
+    width: 100%;
+    font-size: var(--fonte-pp); 
+    font-weight: var(--fonte-bold); 
+}
+
+
+
+.giga-text {
+    font-size: var(--fonte-p); 
+    font-weight: var(--fonte-black); 
+}
+
+

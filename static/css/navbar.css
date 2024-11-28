@@ -1,29 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 /* Mobile First */
-
-:root {
-    --cor-roxo: #6951F1;
-    --cor-branco: #F0F0F0;
-    --cor-cinza: #D9D9D9;
-    --cor-preto: #2E2F2A;
-    --cor-rosa: #F2363A;
-    --cor-verde: #CFEA1C;
-
-    --fonte-pp: 12px;
-    --fonte-p: 16px;
-    --fonte-m1: 20px;
-    --fonte-m2: 22px;
-    --fonte-g: 32px;
-    --fonte-xg: 80px;
-
-    --fonte-regular: 400;
-    --fonte-medium: 500;
-    --fonte-semiBold: 600;
-    --fonte-bold: 700;
-    --fonte-black: 900;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -35,7 +12,7 @@ header {
     background-color: var(--cor-roxo);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0px 3px 10px  var(--cor-preto);
+    box-shadow: 0px 3px 10px var(--cor-preto);
 }
 
 .nav-bar {
@@ -50,13 +27,16 @@ header {
 }
 
 .nome h1 {
-    color: #fff;
-    margin-right: 10px; 
+    color: var(--cor-branco);
+    font-size: var(--fonte-m2);
+    margin-right: 10px;
+    font-weight: var(--fonte-black);
 }
+
 .nome h3 {
-    color: #fff;
+    color: var(--cor-branco);
     font-size: var(--fonte-pp);
-    
+    font-weight: var(--fonte-medium);
 }
 
 .nav-list {
@@ -71,21 +51,26 @@ header {
 }
 
 .nav-item {
-    margin: 0 15px;
+    margin: 5% 1rem;
 }
 
 .nav-link {
     text-decoration: none;
-    font-size: 1.15rem;
-    color: #fff;
-    font-weight: 400;
+    font-size: var(--fonte-p);
+    color: var(--cor-branco);
+    font-weight: var(--fonte-medium);
 }
+
+.nav-link:hover{
+    color: var(--cor-preto);
+}
+
 .destacado {
-    font-weight: bold; /* Deixa o texto em negrito */
-    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: var(--fonte-bold);
+    font-size: var(--fonte-pp);
     background-color: var(--cor-verde);
     border-radius: 20px;
-    padding: 10px 10px;
+    padding: 0.6rem 1.2rem;
     color: var(--cor-preto);
 }
 
@@ -97,52 +82,44 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 956px) {
+/* Media Queries */
+
+@media (max-width: 1023px) {
     .nav-bar {
-        padding: 1.5rem 4rem;
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center; 
+        padding: 1vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* Centraliza o título (h1) */
     .nome {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-bottom: 1rem; 
-    }
-
-    .nome h1 {
-        margin-right: 0;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
     }
 
     .nome h3 {
-        font-size: var(--fonte-pp);
-        display: block; 
+        display: block;
     }
 
-    /* Esconde a lista de navegação padrão */
-    .nav-item,.barra {
+    .nav-item,
+    .barra {
         display: none;
     }
 
-    /* Exibe o ícone do menu */
     .mobile-menu-icon {
         display: block;
-        position: fixed; 
-        top: 1rem;       
-        right: 1rem;     
-        z-index: 1000;   
-        cursor: pointer; 
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+        cursor: pointer;
     }
 
-    /* Estilos para o menu mobile */
     .mobile-menu.open {
         display: block;
-        
     }
 
     .mobile-menu-icon button {
@@ -156,15 +133,61 @@ header {
         flex-direction: column;
         text-align: center;
         padding-bottom: 1rem;
-        width: 100%; /* Garantir que o menu ocupe toda a largura disponível */
+        width: 100%;
     }
 
     .mobile-menu .nav-item {
         display: block;
         padding-top: 1.2rem;
     }
+}
 
-    .open {
-        display: block;
+@media (min-width: 1024px) {
+    .nav-bar {
+        padding: 1vh;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nome {
+        margin: 0 1rem;
+    }
+
+    .nome h1 {
+        font-size: var(--fonte-g);
+        margin-right: 0;
+    }
+
+    .nav-link {
+        font-size: var(--fonte-p);
+    }
+
+    .nome h3,
+    .destacado {
+        font-size: var(--fonte-pp);
+    }
+
+    .barra {
+        margin: 0 15px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .nome {
+        margin: 0 1rem;
+    }
+
+    .nome h1 {
+        font-size: var(--fonte-gg);
+        margin-right: 0;
+    }
+
+    .nome h3,
+    .destacado {
+        font-size: var(--fonte-p);
+    }
+
+    .barra {
+        margin: 0 15px;
     }
 }

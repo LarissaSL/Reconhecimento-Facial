@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(digitar, speed);
         } else if (isDeleting && index > 0) {
             // Apagar a letra do texto digitado
-            elemento.textContent = textoDestacado.substring(0, index - 1);
+            elemento.removeChild(elemento.lastChild);
             index--;
             setTimeout(digitar, deleteSpeed);
         } else if (!isDeleting && index === textoDestacado.length) {
