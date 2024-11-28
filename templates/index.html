@@ -7,37 +7,81 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/index.css">
     <title>GIGA</title>
 </head>
 
 <body>
     <header>
         <nav class="nav-bar">
-            <span id="burguer" class="material-symbols-outlined">menu</span>
-            <div class="logo">
-                <h2>GIGA</h2>
+            <div class="nome">
+                <h1>GIGA <span class="barra">|</span></h1>
+                <h3>
+                    Gestão Integrada de Gerenciamento Acadêmico
+                </h3>
             </div>
-            <div class="separador"></div>
-            <div class="significado-logo">Gestão Integrada de Gerenciamento Acadêmico</div>
-            <div class="nav-lista" style="display:none">
+
+            <div class="nav-list">
                 <ul>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}" class="nav-link">Cadastro</a>
+                        <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}"
+                            class="nav-link">Cadastro</a>
                     </li>
                     <li class="nav-item painel-button">
-                        <a href="{{ url_for('reconhecimentoController.reconhecimento') }} " class="nav-link">Acessar portal</a>
+                        <a href="{{ url_for('reconhecimentoController.reconhecimento') }}"
+                            class="nav-link destacado">Acessar portal</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img class="icon" src="/static/img/menu_white_36dp.svg" alt="Menu">
+                </button>
+            </div>
+            <div class="mobile-menu">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}"
+                            class="nav-link">Cadastro</a>
+                    </li>
+                    <li class="nav-item painel-button">
+                        <a href="{{ url_for('reconhecimentoController.reconhecimento') }} "
+                            class="nav-link destacado">Acessar
+                            portal</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <main class="conteudo-principal">
+        <img src="/static/img/Jovens.png" alt="Descrição da imagem" class="imagem-ajustada">
+        
+        <div class="texto-container">
+            <div class="texto-esquerdo">
+                <h1>Experiência acadêmica revolucionária</h1>
+                <div id="typewriter"></div> <!-- Aqui vai o efeito de digitação -->
+            </div>
+        </div>
+        
+        <a href="{{ url_for('reconhecimentoController.reconhecimento') }}">
+            <button class="btn">Acessar portal</button>
+        </a>
+    </main>
 
-
+    <footer>
+        <p><span class="giga-text">GIGA |</span> © 2024 Todos os Direitos Reservados.</p>
+    </footer>
+    
     <script src="/static/js/nav.js"></script>
+    <script src="/static/js/digitacao.js"></script>
 </body>
 
 </html>

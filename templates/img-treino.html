@@ -5,33 +5,97 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Salvar novas Imagens</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/img-treino.css">
 </head>
 
 <body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nome">
+                <h1>GIGA <span class="barra">|</span></h1>
+                <h3>
+                    Gestão Integrada de Gerenciamento Acadêmico
+                </h3>
+            </div>
 
-    <h1>Envio de Imagem</h1>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}"
+                            class="nav-link">Cadastro</a>
+                    </li>
+                    <li class="nav-item painel-button">
+                        <a href="{{ url_for('reconhecimentoController.reconhecimento') }}"
+                            class="nav-link destacado">Acessar portal</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img class="icon" src="/static/img/menu_white_36dp.svg" alt="Menu">
+                </button>
+            </div>
+            <div class="mobile-menu">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}"
+                            class="nav-link">Cadastro</a>
+                    </li>
+                    <li class="nav-item painel-button">
+                        <a href="{{ url_for('reconhecimentoController.reconhecimento') }} "
+                            class="nav-link destacado">Acessar
+                            portal</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    {% if carregando == 'false' %}
-        {% if caminho_imagem %}
-            <p>Nova Imagem salva com o ID: {{ id }}</p>
-            <p>A imagem foi guardada com sucesso.</p>
-            <p>Caminho da imagem: {{ caminho_imagem }}</p>
-        {% else %}
-            <p>A captura foi cancelada ou houve um erro ao salvar a imagem.</p>
-        {% endif %}
+    <main class="conteudo-principal">
+        <div class="title">
+            <h1>Envio de Imagem</h1>
+            <h3>Para treinarmos o Sistema a fazer o Reconhecimento Facial, precisamos que você envie algumas fotos.</h3>
+        </div>
 
-    <br><br>
-    <a href="{{ url_for('imgTreinoController.guardar_nova_imagem') }}">
-        <button>Inserir novas Imagens para Treino</button>
-    </a>
-    <a href="/">Voltar para o Índice</a>
+        <div class="conteudo">
+            <h1>Passo a Passo</h1>
+            <div class="cards">
+                <div class="card">
+                    <img src="/static/img/camera.png" alt="Descrição da imagem" class="imagem-ajustada">
+                    <p>Para começar, basta clicar no botão abaixo: Inserir novas Imagens.</p>
+                </div>
+                <div class="card">
+                    <img src="/static/img/pessoa.png" alt="Descrição da imagem" class="imagem-ajustada">
+                    <p>Para começar, basta clicar no botão abaixo: Inserir novas Imagens.</p>
+                </div>
+                <div class="card">
+                    <img src="/static/img/enter.png" alt="Descrição da imagem" class="imagem-ajustada">
+                    <img src="/static/img/image.png" alt="Descrição da imagem" class="imagem-ajustada">
+                    <p>Para Cancelar, pressione ESC</p>
+                    <p>Para Salvar a foto, pressione ENTER</p>
+                </div>
+            </div>
 
-    {% else %}
-    <p>Criar algo de Loading aqui</p>
-    <a href="{{ url_for('imgTreinoController.guardar_nova_imagem') }}">
-        <button>Inserir novas Imagens para Treino</button>
-    </a>
-    <a href="/">Voltar para o Índice</a>
-    {% endif %}
+            <!-- Exibe o botão para inserir novas imagens -->
+            <a href="{{ url_for('imgTreinoController.guardar_nova_imagem') }}">
+                <button class="btn">Inserir novas Imagens</button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p><span class="giga-text">GIGA |</span> © 2024 Todos os Direitos Reservados.</p>
+    </footer>
 </body>
+
 </html>

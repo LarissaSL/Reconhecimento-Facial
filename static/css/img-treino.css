@@ -1,0 +1,260 @@
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    color: var(--cor-rosa);
+    margin-top: 30px;
+}
+
+.title h1 {
+    font-size: var(--fonte-xg);
+    font-weight: var(--fonte-bold);
+    margin-bottom: 15px;
+}
+
+.title h3 {
+    font-size: var(--fonte-p);
+    font-weight: var(--fonte-regular);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.conteudo {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(242, 54, 58, 1);
+    border-radius: 50px 50px 0 0;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-top: 5%;
+}
+
+.card {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.btn {
+    width: 20%;
+    height: 60px;
+    border-radius: 50px;
+
+    background-image: linear-gradient(135deg, var(--cor-verde) 0%, var(--cor-verde) 100%);
+    box-shadow: 0 20px 30px -6px var(--cor-preto);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: var(--cor-preto);
+    margin-left: 10%;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.btn:active {
+    opacity: 0.5;
+}
+
+
+
+/* Responsividade para telas menores */
+css
+
+Verify
+
+Open In Editor
+Edit
+Copy code
+/* Estilos gerais */
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    color: var(--cor-rosa);
+    margin-top: 30px;
+}
+
+.title h1 {
+    font-size: var(--fonte-xg);
+    font-weight: var(--fonte-bold);
+    margin-bottom: 15px;
+}
+
+.title h3 {
+    font-size: var(--fonte-p);
+    font-weight: var(--fonte-regular);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.conteudo {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(242, 54, 58, 1);
+    border-radius: 50px 50px 0 0;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-top: 5%;
+}
+
+.card {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+.btn {
+    width: 20%;
+    height: 60px;
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, var(--cor-verde) 0%, var(--cor-verde) 100%);
+    box-shadow: 0 20px 30px -6px var(--cor-preto);
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    color: var(--cor-preto);
+    margin-left: 10%;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.btn:active {
+    opacity: 0.5;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 870px) {
+    .title h1 {
+        font-size: var(--fonte-m2);
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .card {
+        width: 80%; 
+        margin-bottom: 20px; 
+    }
+
+    .btn {
+        width: 80%; 
+        margin-left: 0; 
+        margin-top: 20px; 
+    }
+
+    .title h3 {
+        font-size: var(--fonte-p);
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: var(--fonte-m); /* Tamanho de fonte menor */
+    }
+
+    .title h3 {
+        font-size: var(--fonte-s); /* Tamanho de fonte menor para o subtítulo */
+    }
+
+    .btn {
+        font-size: 20px; /* Ajusta o tamanho da fonte do botão */
+    }
+}

@@ -1,0 +1,12 @@
+
+footer {
+    text-align: center; 
+    padding: 20px 0; 
+    background-color: var(--cor-branco); 
+    color: var(--cor-roxo);
+}
+
+.giga-text {
+    font-size: 2em; 
+    font-weight: bold; 
+}
