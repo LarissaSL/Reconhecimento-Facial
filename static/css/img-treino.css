@@ -1,3 +1,11 @@
+html, body {
+    height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
 .conteudo-principal {
     display: flex;
     flex-direction: column;
