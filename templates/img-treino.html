@@ -45,7 +45,7 @@
             <div class="mobile-menu">
                 <ul>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="/" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ url_for('imgTreinoController.feedback', carregando='true') }}"
@@ -72,17 +72,28 @@
             <div class="cards">
                 <div class="card">
                     <img src="/static/img/camera.png" alt="Descrição da imagem" class="imagem-ajustada">
-                    <p>Para começar, basta clicar no botão abaixo: Inserir novas Imagens.</p>
+                    <p>Para começar, basta clicar no botão abaixo: <span class="texto-vermelho">Inserir novas Imagens</span>.</p>
                 </div>
+                
+                
                 <div class="card">
                     <img src="/static/img/pessoa.png" alt="Descrição da imagem" class="imagem-ajustada">
-                    <p>Para começar, basta clicar no botão abaixo: Inserir novas Imagens.</p>
+                    <p>Basta mexer a câmera até: <span class="texto-vermelho">Identificar o seu rosto.</span></p>
                 </div>
                 <div class="card">
                     <img src="/static/img/enter.png" alt="Descrição da imagem" class="imagem-ajustada">
                     <img src="/static/img/image.png" alt="Descrição da imagem" class="imagem-ajustada">
-                    <p>Para Cancelar, pressione ESC</p>
-                    <p>Para Salvar a foto, pressione ENTER</p>
+                    <p>Para,
+                        <span class="texto-vermelho">Cancelar</span>
+                        pressione 
+                        <span class="texto-vermelho">ESC</span>
+                    </p>
+
+                    <p>Para 
+                    <span class="texto-azul">Salvar</span>
+                    a foto, pressione 
+                    <span class="texto-azul">ENTER</span>
+                </p>
                 </div>
             </div>
 
@@ -110,6 +121,8 @@
             <p><span class="giga-text">GIGA |</span> © 2024 Todos os Direitos Reservados.</p>
         </div>
     </footer>
+    <script src="/static/js/nav.js"></script>
+
 </body>
 
 </html>
