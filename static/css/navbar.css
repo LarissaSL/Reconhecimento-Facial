@@ -62,7 +62,8 @@ header {
 }
 
 .nav-link:hover{
-    color: var(--cor-preto);
+    color: var(--cor-verde);
+    font-weight: var(--fonte-bold);
 }
 
 .destacado {
@@ -71,6 +72,10 @@ header {
     background-color: var(--cor-verde);
     border-radius: 20px;
     padding: 0.6rem 1.2rem;
+    color: var(--cor-preto);
+}
+
+.destacado:hover {
     color: var(--cor-preto);
 }
 

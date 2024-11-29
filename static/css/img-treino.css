@@ -38,7 +38,6 @@ body {
     font-weight: var(--fonte-regular);
     color: var(--cor-preto);
     line-height: 1.6;
-    margin-bottom: 30px;
 }
 
 .texto-vermelho {
