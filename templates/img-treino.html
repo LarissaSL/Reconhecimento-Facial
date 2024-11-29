@@ -64,7 +64,7 @@
     <main class="conteudo-principal">
         <div class="title">
             <h1>Envio de Imagem</h1>
-            <h3>Para treinarmos o Sistema a fazer o Reconhecimento Facial, precisamos que você envie algumas fotos.</h3>
+            <h3>Para treinarmos o Sistema a <strong>fazer o Reconhecimento Facial,</strong> precisamos que você <strong>envie algumas fotos.</strong></h3>
         </div>
 
         <div class="conteudo">
@@ -110,9 +110,7 @@
             {% endif %}
 
             <!-- Exibe o botão para inserir novas imagens -->
-            <a href="{{ url_for('imgTreinoController.guardar_nova_imagem') }}">
-                <button class="btn">Inserir novas Imagens</button>
-            </a>
+            <a href="{{ url_for('imgTreinoController.guardar_nova_imagem') }}" class="btn">Inserir novas Imagens</a>
         </div>
     </main>
 

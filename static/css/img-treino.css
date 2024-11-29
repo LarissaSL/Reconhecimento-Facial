@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -6,19 +7,24 @@ main {
     flex: 1;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .conteudo-principal {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 20px;
 }
 
 .title {
     text-align: center;
     color: var(--cor-rosa);
     margin-top: 30px;
-    
+
 }
 
 .title h1 {
@@ -30,22 +36,28 @@ main {
 .title h3 {
     font-size: var(--fonte-p);
     font-weight: var(--fonte-regular);
+    color: var(--cor-preto);
     line-height: 1.6;
     margin-bottom: 30px;
 }
+
 .texto-vermelho {
     color: var(--cor-rosa);
 }
-.texto-azul{
+
+.texto-azul {
     color: var(--cor-roxo);
 }
-p{
+
+.conteudo-principal p {
     font-weight: bold;
-color: var(--cor-preto);
+    color: var(--cor-preto);
 }
+
 .conteudo {
     position: relative;
     text-align: center;
+    flex: 1;
     padding: 20px;
     width: 100%;
     background-color: rgba(242, 54, 58, 1);
@@ -53,10 +65,11 @@ color: var(--cor-preto);
     margin-top: 3%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
-.conteudo h1{
+
+.conteudo h1 {
     color: var(--cor-branco);
+    margin-top: 40px;
 }
 
 .cards {
@@ -64,8 +77,7 @@ color: var(--cor-preto);
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
-    margin-top: 5%;
+    margin: 40px 0;
 }
 
 .card {
@@ -97,20 +109,20 @@ color: var(--cor-preto);
 
 
 .btn {
-    height: 60px;
-    border-radius: 50px;
-    background-image: linear-gradient(135deg, var(--cor-verde) 0%, var(--cor-verde) 100%);
-    box-shadow: 0 20px 30px -6px var(--cor-preto);
-    outline: none;
-    cursor: pointer;
-    border: none;
-    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: var(--fonte-bold);
+    font-size: 0.9rem;
+    background-color: var(--cor-verde);
+    border-radius: 20px;
+    padding: 1rem;
+    min-width: 172px;
+    max-width: 240px;
+    width: 60%;
     color: var(--cor-preto);
-    margin-left: 10%;
-    font-weight: bold;
+    margin: 40px 0;
+    align-self: center;
     transition: all 0.3s ease-in-out;
-    padding-left: 20px; 
-    padding-right: 20px; 
 }
 
 .btn:hover {
@@ -132,18 +144,17 @@ color: var(--cor-preto);
 
     .cards {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
     }
 
     .card {
-        width: 80%; 
-        margin-bottom: 20px; 
+        width: 80%;
+        margin-bottom: 20px;
     }
 
     .btn {
-        width: 80%; 
-        margin-left: 0; 
-        margin-top: 20px; 
+        width: 80%;
+        margin-left: 0;
     }
 
     .title h3 {

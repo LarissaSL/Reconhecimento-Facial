@@ -144,7 +144,7 @@ header {
 
 @media (min-width: 1024px) {
     .nav-bar {
-        padding: 1vh;
+        max-height: 102px;
         flex-direction: row;
         align-items: center;
     }
