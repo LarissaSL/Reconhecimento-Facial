@@ -11,7 +11,7 @@ def guardar_nova_imagem():
     id = gerar_identificador_unico()
 
     # Salvar a imagem
-    caminho_imagem = salvar_imagem_de_treino(id)
+    caminho_imagem = salvar_imagem_de_treino(id, nomeIdentificacao = "larissa")
     print(caminho_imagem)
 
     # Redireciona para a página com feedback de sucesso

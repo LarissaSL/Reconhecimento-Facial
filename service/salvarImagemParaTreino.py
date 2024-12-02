@@ -3,13 +3,16 @@ import os
 import time
 
 # Função para salvar imagem de treino
-def salvar_imagem_de_treino(id, amostra='aluno'):
+def salvar_imagem_de_treino(id, amostra='aluno', nomeIdentificacao=''):
+    if not nomeIdentificacao:
+        raise ValueError("O nome de identificação não pode ser vazio.")
+
     l, a = 220, 220
     # Carregar o classificador de rosto Haar
     classificadorFace = cv2.CascadeClassifier('cascades/haarcascade_frontalface_default.xml')
 
     # Inicializar a captura de vídeo
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
 
     # Adicione um delay para abrir a câmera
     time.sleep(2)
@@ -58,7 +61,7 @@ def salvar_imagem_de_treino(id, amostra='aluno'):
                 imagemFace = cv2.resize(frameCinza[y:y + h, x:x + w], (l, a))
 
                 # Definir o caminho da imagem a ser salva
-                caminho_imagem = os.path.join(diretorio, f"codigo{id}.{amostra}.jpg")
+                caminho_imagem = os.path.join(diretorio, f"codigo{id}.{amostra}.{nomeIdentificacao}.jpg")
 
                 # Salvar a imagem no diretório
                 cv2.imwrite(caminho_imagem, imagemFace)
