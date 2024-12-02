@@ -44,7 +44,7 @@ def salvar_imagem_de_treino(id, amostra='aluno', nomeIdentificacao=''):
         # Verificar se algum rosto foi detectado e exibir a mensagem se não houver
         if len(facesDetectadas) == 0:
             cv2.putText(frame, "Nenhum rosto detectado! Mexa a camera.", (100, 100),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (128, 0, 128), 2, cv2.LINE_AA)
 
         # Exibir o frame com a detecção de rostos
         cv2.imshow("frame", frame)
