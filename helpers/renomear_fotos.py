@@ -4,7 +4,7 @@ import os
 pasta = "./imagensTreino"
 
 alunos_ra = {
-    "larissa": "12345",
+    "larissa": "1371392222020",
     "wesley": "1371392222024"
 }
 
