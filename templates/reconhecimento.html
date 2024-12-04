@@ -80,7 +80,7 @@
         function mostrarToast(mensagem) {
             Toastify({
                 text: mensagem,
-                duration: 3000,
+                duration: 80000,
                 close: true,
                 gravity: "top",
                 position: "right",
@@ -92,6 +92,7 @@
 
         // Função para iniciar o reconhecimento
         function iniciarReconhecimento() {
+            mostrarToast('Aperte * Espaço*  para capturar a imagem.');
             const videoElement = document.getElementById('videoFeed');
             const statusText = document.getElementById('statusText');
             const startBtn = document.getElementById('startBtn');
@@ -140,7 +141,7 @@
                         const match = ultimaInformacao.match(/Confiança: (\d+\.?\d*)/);
                         if (match) {
                             const confianca = parseFloat(match[1]);
-                            confiancaBaixa = (confianca == null || confianca < 10);  // Atualiza a variável global confiancaBaixa
+                            confiancaBaixa = (confianca == null || confianca < 15);  // Atualiza a variável global confiancaBaixa
                         } else {
                             confiancaBaixa = true;  
                         }
