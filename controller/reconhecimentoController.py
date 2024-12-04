@@ -33,7 +33,7 @@ def gerar_frames():
             cv2.rectangle(imagem, (x, y), (x + l, y + a), (0, 0, 255), 2)
             id, confianca = reconhecedor.predict(imagemFace)
             nome = "Desconhecido"
-            if id == 1371392222020:
+            if id == 123456:
                 nome = 'Larissa'
             elif id == 13713:
                 nome = 'Wesley'

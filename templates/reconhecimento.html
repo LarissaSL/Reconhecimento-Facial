@@ -140,7 +140,7 @@
                         const match = ultimaInformacao.match(/Confiança: (\d+\.?\d*)/);
                         if (match) {
                             const confianca = parseFloat(match[1]);
-                            confiancaBaixa = (confianca == null || confianca < 80);  // Atualiza a variável global confiancaBaixa
+                            confiancaBaixa = (confianca == null || confianca < 10);  // Atualiza a variável global confiancaBaixa
                         } else {
                             confiancaBaixa = true;  
                         }
@@ -165,6 +165,7 @@
         document.addEventListener('keydown', function (event) {
             if (event.code === 'Space') {
                 event.preventDefault();  
+                console.log(confiancaBaixa)
 
                 if (confiancaBaixa) {
                     mostrarToast('Confiança insuficiente para redirecionar!');
