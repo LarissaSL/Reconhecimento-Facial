@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Painel do Aluno</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Reconhecimento</title>
 </head>
 <body>
-    <h1>Painel do Aluno</h1>
-    <a href="/">Voltar para o Índice</a>
+    <h1>Painel de Reconhecimento Facial</h1>
+
+    <div id="informacoesConfiança">
+        <h2>Última Confiança:</h2>
+        <p id="informacaoConfianca">Carregando...</p>
+    </div>
+
+    <script>
+        // Recupera as informações de confiança do localStorage
+        const ultimaInformacao = localStorage.getItem('ultimaInformacao');
+        
+        if (ultimaInformacao) {
+            // Exibe a última informação de confiança
+            document.getElementById('informacaoConfianca').textContent = ultimaInformacao;
+        } else {
+            // Caso não haja informações armazenadas
+            document.getElementById('informacaoConfianca').textContent = 'Nenhuma informação disponível.';
+        }
+    </script>
 </body>
 </html>

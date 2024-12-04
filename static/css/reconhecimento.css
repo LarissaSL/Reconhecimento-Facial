@@ -1,0 +1,99 @@
+/* Estilos Globais */
+main {
+    min-height: 100vh;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2.5rem;
+    color: var(--cor-preto);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão */
+.btn {
+    text-align: center;
+    text-decoration: none;
+    font-weight: var(--fonte-bold);
+    font-size: 0.9rem;
+    background-color: var(--cor-verde);
+    border-radius: 20px;
+    padding: 1rem;
+    min-width: 172px;
+    max-width: 240px;
+    width: 60%;
+    color: var(--cor-preto);
+    transition: all 0.3s ease-in-out;
+    margin-left: 40%; 
+    margin-bottom: 20px;
+}
+
+/* Hover do botão */
+.btn:hover {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+/* Efeito ao clicar no botão */
+.btn:active {
+    opacity: 0.5;
+}
+
+/* Estilo do feed de vídeo */
+#videoFeed {
+    display: block;
+    margin: 30px auto;
+    max-width: 100%;
+    border: 2px solid var(--cor-roxo);
+    border-radius: 8px;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas pequenas (mobiles) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 80%;
+        min-width: 150px;
+        margin-left: 25%;
+    }
+    
+    main {
+        padding: 0 5%; 
+    }
+}
+
+/* Telas muito pequenas (dispositivos móveis) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+        min-width: 140px;
+    }
+
+    main {
+        padding: 0 5%;
+    }
+}
+
+/* Telas médias (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        width: 70%;
+        min-width: 160px;
+        margin-left: 15%;
+    }
+}
