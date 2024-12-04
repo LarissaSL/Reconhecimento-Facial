@@ -19,12 +19,12 @@ while (True):
         imagemFace = cv2.resize(imagemCinza[y:y + a, x:x + l], (largura, altura))
         cv2.rectangle(imagem, (x, y), (x + l, y + a), (0,0,255), 2)
         id, confianca = reconhecedor.predict(imagemFace)
-        nome = ""
+        nome = "Desconhecido"
         if id == 1371392222020:
             nome = 'Larissa'
-        elif id == 1371392222024:
+        elif id == 13713:
             nome = 'Wesley'
-        else: nome = 'Ninguém'
+        else: nome = 'Ninguem'
 
         print(nome)
 

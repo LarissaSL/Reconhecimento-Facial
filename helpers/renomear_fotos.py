@@ -5,7 +5,7 @@ pasta = "./imagensTreino"
 
 alunos_ra = {
     "larissa": "1371392222020",
-    "wesley": "1371392222024"
+    "wesley": "13713"
 }
 
 # Função para renomear os arquivos
