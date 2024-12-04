@@ -95,7 +95,7 @@ def get_informacoes():
         match = re.search(r"Confiança: (\d+\.?\d*)", ultima_informacao)
         if match:
             confianca = float(match.group(1))
-            if confianca < 90:
+            if confianca < 10:
                 confianca_baixa = True
     
     return jsonify({
