@@ -1,6 +1,7 @@
 /* Estilos Globais */
 main {
     min-height: 100vh;
+    text-align: center;
 }
 
 /* Estilo do título */
@@ -9,6 +10,10 @@ h1 {
     color: var(--cor-preto);
     text-align: center;
     margin-bottom: 20px;
+}
+
+main p {
+    margin: 20px 0;
 }
 
 /* Estilo do botão */
@@ -25,7 +30,6 @@ h1 {
     width: 60%;
     color: var(--cor-preto);
     transition: all 0.3s ease-in-out;
-    margin-left: 40%; 
     margin-bottom: 20px;
 }
 
