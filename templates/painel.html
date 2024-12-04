@@ -1,29 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de Reconhecimento</title>
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/painel.css">
+
 </head>
+
 <body>
-    <h1>Painel de Reconhecimento Facial</h1>
+    <header>
+        <nav class="nav-bar">
+            <div class="nome">
+                <h1>GIGA <span class="barra">|</span></h1>
+                <h3>
+                    Gestão Integrada de Gerenciamento Acadêmico
+                </h3>
+            </div>
 
-    <div id="informacoesConfiança">
-        <h2>Última Confiança:</h2>
-        <p id="informacaoConfianca">Carregando...</p>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Histórico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Agenda</a>
+                    </li>
+                    <li class="nav-item painel-button">
+                        <a href="/" class="nav-link destacado">Sair</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img class="icon" src="/static/img/menu_white_36dp.svg" alt="Menu">
+                </button>
+            </div>
+            <div class="mobile-menu">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Historico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Agenda</a>
+                    </li>
+                    <li class="nav-item painel-button">
+                        <a href="/" class="nav-link destacado">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <h1> Painel do Aluno</h1>
+    <div class="container">
+
+        <aside>
+            <div class="card">
+                <img src="/static/img/user-placeholder.png" alt="Foto do usuário" id="userPhoto">
+                <h3 id="userName">Carregando...</h3>
+                <p id="userInfo">Confiança: Carregando...</p>
+            </div>
+
+            <div class="aulas-lista">
+                <h2>Aulas do Dia</h2>
+                <div id="listaAulas"></div>
+            </div>
+        </aside>
+        <main>
+            <div class="horarios">
+                <h3>Presença</h3>
+                <ul id="listaHorarios"></ul>
+            </div>
+
+            <!-- Painel da aula atual ou próxima aula -->
+            <div class="aula-atual">
+                <h3>Aula Atual</h3>
+                <p id="aulaAtual">Carregando...</p>
+                <p id="descricaoAula">Descrição da aula será exibida aqui...</p> <!-- Descrição da aula -->
+            </div>
+        </main>
+
+        <aside class="atividades-passadas">
+            <h2>Atividades Passadas</h2>
+            <div class="carrossel-container">
+                <button id="btnAnterior">&lt;</button>
+                <div class="carrossel">
+                    <div class="atividade-container">
+                    </div>
+                </div>
+                <button id="btnProximo">&gt;</button>
+            </div>
+        </aside>
     </div>
-
-    <script>
-        // Recupera as informações de confiança do localStorage
-        const ultimaInformacao = localStorage.getItem('ultimaInformacao');
-        
-        if (ultimaInformacao) {
-            // Exibe a última informação de confiança
-            document.getElementById('informacaoConfianca').textContent = ultimaInformacao;
-        } else {
-            // Caso não haja informações armazenadas
-            document.getElementById('informacaoConfianca').textContent = 'Nenhuma informação disponível.';
-        }
-    </script>
+    <footer>
+        <div class="info-footer">
+            <p><span class="giga-text">GIGA |</span> © 2024 Todos os Direitos Reservados.</p>
+        </div>
+    </footer>
+    <script src="/static/js/nav.js"></script>
+    <script src="/static/js/carregarAulaAtual.js"></script>
+    <script src="/static/js/carregarHorarios.js"></script>
+    <script src="/static/js/carregarAtividadesPassadas.js"></script>
+    <script src="/static/js/atualizarCard.js"></script>
+    <script src="/static/js/carregarAulasDoDia.js"></script>
 </body>
+
 </html>

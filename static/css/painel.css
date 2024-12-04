@@ -1,0 +1,345 @@
+h1 {
+    color: var(--cor-rosa);
+    margin-top: 2%;
+    text-align: center;
+    font-size: var(--fonte-g);
+}
+
+.container {
+    display: flex;
+    gap: 16px;
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+main {
+    width: 75%;
+    background-color: #ffffff;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    width: 25%;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20%;
+    margin-left: 2%;
+}
+
+.card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.aulas-lista {
+    margin-top: 20px;
+}
+
+.aulas-lista h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--cor-branco);
+}
+
+.aulas-lista p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: var(--cor-branco);
+}
+
+main {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.horarios {
+    flex: 0 0 200px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.horarios ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.horarios li {
+    display: flex;
+    margin: 10px 0px;
+    margin-bottom: 10px;
+    margin-left: 2%;
+}
+
+.horarios,
+.aula-atual {
+    width: 70%;
+}
+
+.aula-atual {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.aula-atual h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.aula-atual p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Estilo para o nome da aula */
+#aulaAtual {
+    font-weight: bold;
+    color: var(--cor-roxo);
+}
+
+/* Estilo para a descrição da aula */
+#descricaoAula {
+    font-size: 1em;
+    color: #777;
+    line-height: 1.6;
+    padding-top: 10px;
+}
+
+.horarios input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--cor-roxo);
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease;
+    margin-right: 5%;
+}
+
+/* Estilo quando o checkbox está marcado */
+.horarios input[type="checkbox"]:checked {
+    background-color: var(--cor-verde);
+    border-color: var(--cor-verde);
+}
+
+/* Estilo do ícone de check (marca) */
+.horarios input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+}
+
+.aula {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: var(--cor-roxo);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrossel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.carrossel {
+    flex: 1;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--cor-branco);
+    padding: 10px;
+}
+
+.atividade-container {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+.atividades-passadas {
+    width: 50%;
+    color: #ffffff;
+    padding: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-y: auto;
+    text-align: center;
+    margin: 20px;
+}
+
+.atividades-passadas h2 {
+    font-size: var(--fonte-m1);
+    color: var(--cor-preto);
+    margin-bottom: 4%;
+}
+
+.atividade {
+    display: none;
+    padding: 10px;
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: var(--cor-roxo);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.atividade.active {
+    display: block;
+}
+
+#btnAnterior,
+#btnProximo {
+    background-color: var(--cor-roxo);
+    color: var(--cor-branco);
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.atividade h3 {
+    margin: 0 0 8px 0;
+    font-size: var(--fonte-m2);
+    text-align: center;
+}
+
+.atividade p {
+    margin: 0 0 10px 0;
+    padding: 10px;
+    background-color: var(--cor-branco);
+    color: var(--cor-roxo);
+    border-radius: 10px;
+    line-height: 2.5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.criterios {
+    list-style: none;
+    /* Remove marcadores padrão */
+    padding: 0;
+    margin: 12px 0 0 0;
+}
+
+.criterios li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.criterios input {
+    margin: 0;
+}
+
+.criterios label {
+    font-size: 14px;
+}
+
+.criterios input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 2px solid var(--cor-roxo);
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Estilo quando o checkbox está marcado */
+.criterios input[type="checkbox"]:checked {
+    background-color: var(--cor-verde);
+    border-color: var(--cor-verde);
+}
+
+/* Estilo do ícone de check (marca) */
+.criterios input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+}
+
+@media (max-width: 1023px) {
+    .container {
+        display: flex;
+        gap: 16px;
+        margin-top: 5%;
+        margin-bottom: 4%;
+        flex-direction: column;
+        align-items: center;
+    }
+    aside {
+        width: 85%;
+        padding: 34px;
+        border-right: 1px solid #ddd;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 20%;
+        margin-left: 2%;
+    }
+    main {
+        width: 89%;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .atividades-passadas {
+        width: 89%;
+        color: #ffffff;
+        padding: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow-y: auto;
+        text-align: center;
+        margin: 20px;
+    }
+}
